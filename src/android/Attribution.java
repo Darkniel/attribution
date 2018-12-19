@@ -1,13 +1,4 @@
-package com.neuraweb.cordova;
-
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.PluginResult;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+package com.neuraweb.cordova.attribution;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -19,7 +10,7 @@ import android.util.Log;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class attribution extends BroadcastReceiver {
+public class Attribution extends BroadcastReceiver {
     
     public void onReceive(Context context, Intent intent) {
 

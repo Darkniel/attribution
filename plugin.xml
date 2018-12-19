@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-attribution" version="0.0.1">
-  <name>attribution</name>
+  <name>Attribution</name>
   <js-module name="attribution" src="www/attribution.js">
     <clobbers target="cordova.plugins.attribution"/>
   </js-module>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="attribution">
-        <param name="android-package" value="com.neuraweb.cordova.attribution"/>
+      <feature name="Atribution">
+        <param name="android-package" value="com.neuraweb.cordova.attribution.Atribution"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution">
+      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution.Atribution">
         <intent-filter>
             <action android:name="com.android.vending.INSTALL_REFERRER" />
         </intent-filter>
         </receiver>
     </config-file>
-    <source-file src="src/android/attribution.java" target-dir="src/com/neuraweb/cordova"/>
+    <source-file src="src/android/Attribution.java" target-dir="src/com/neuraweb/cordova/attribution"/>
   </platform>
 </plugin>
