@@ -17,6 +17,6 @@
         </intent-filter>
         </receiver>
     </config-file>
-    <source-file src="src/android/attribution.java" target-dir="src/com/neuraweb/cordova/attribution"/>
+    <source-file src="src/android/attribution.java" target-dir="src/com/neuraweb/cordova"/>
   </platform>
 </plugin>
