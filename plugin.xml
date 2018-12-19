@@ -6,12 +6,12 @@
   </js-module>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="Atribution">
-        <param name="android-package" value="com.neuraweb.cordova.attribution.Atribution"/>
+      <feature name="Attribution">
+        <param name="android-package" value="com.neuraweb.cordova.attribution.Attribution"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution.Atribution">
+      <receiver android:exported="true" android:name="com.neuraweb.cordova.attribution.Attribution">
         <intent-filter>
             <action android:name="com.android.vending.INSTALL_REFERRER" />
         </intent-filter>
