@@ -35,28 +35,4 @@ public class attribution extends BroadcastReceiver {
         edit.apply();
     }
 }
-public class referal extends CordovaPlugin {
-    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("getReferer")) {
-            String message = args.getString(0);
-            this.getReferer(message, callbackContext);
-            return true;
-        }
-        return false;
-    }
-    private void getReferer(String message, CallbackContext callbackContext) {
-        // Context context = cordova.getActivity().getApplicationContext();
-        Context context = this.cordova.getActivity().getApplicationContext();
-        // Context context = getActivity().getApplicationContext();
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String referer = preferences.getString("referrer", "");
-        if(!referer.equalsIgnoreCase(""))
-        {
-            callbackContext.success(referer);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
-    }
-}
